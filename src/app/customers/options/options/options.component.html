@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body bg-dark navbar-dark">
+        <ul class="nav navbar-nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='["orders"]' >Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]='["view", id]'>Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['edit', id]">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)='dltCustomer()' >Delete</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

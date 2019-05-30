@@ -1,0 +1,15 @@
+.container-fluid,
+aside {
+  height: 100%;
+}
+.container-fluid > div.row {
+  height: 15%;
+  background-color: rgb(9, 9, 48);
+}
+.container-fluid > .row > .container-fluid,
+section {
+  height: 85%;
+}
+nav {
+  background-color: rgb(30, 30, 56);
+}

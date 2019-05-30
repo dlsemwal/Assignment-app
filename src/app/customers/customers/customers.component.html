@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-4">
+    <header class="p-3">
+      <h3> Customers
+        <a class=' btn btn-success float-right' [routerLink]="['add-customer']">
+          <b>+</b>
+        </a>
+      </h3>
+    </header>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3" *ngIf="customers.length">
+    <div class="card">
+      <div class="card-body bg-dark navbar-dark">
+        <ul class="nav navbar-nav flex-column">
+          <li class="nav-item" *ngFor="let customer of customers; let i = index">
+            <a class="nav-link" [routerLink]="['customer', i]">{{customer.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

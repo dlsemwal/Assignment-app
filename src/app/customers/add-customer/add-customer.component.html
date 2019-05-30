@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Add New Customer</h4>
+  </div>
+  <form #customerForm='ngForm' [ngClass]='customerForm.touched ? "was-validated":""'
+  (ngSubmit)='formSubmit(customerForm.value)'>
+    <div class="card-body">
+      <div class='form-group'>
+        Name: <br>
+        <input type="text" name="name" class="form-control" #nameInput='ngModel' [(ngModel)]='name' required>
+        <div class="valid-feedback" *ngIf='nameInput.touched && nameInput.valid'>Looks good!</div>
+        <div class='invalid-feedback' *ngIf='nameInput.touched && nameInput.invalid'>Required input!</div>
+      </div>
+
+      <div class='form-group'>
+          Contact: <br>
+          <input type="number" name="contact" class="form-control" #contactInput='ngModel' [(ngModel)]='contact' required>
+          <div class="valid-feedback" *ngIf='contactInput.touched && contactInput.valid'>Looks good!</div>
+          <div class='invalid-feedback' *ngIf='contactInput.touched && contactInput.invalid'>Required input!</div>
+        </div>
+
+
+      <div class='form-group'>
+        Address:<br>
+        <input type="text" name="address" class="form-control" #addressInput="ngModel" [(ngModel)]='address' required>
+        <div class='valid-feedback' *ngIf='addressInput.touched && addressInput.valid'>
+          Looks good!
+        </div>
+        <div class='invalid-feedback' *ngIf='addressInput.touched && addressInput.invalid'>
+          Required Input
+        </div>
+      </div>
+    </div>
+    <div class="card-footer overflow-hidden">
+      <input type="submit" class="btn btn-success float-right">
+      <input type="reset" class="btn btn-danger float-right mx-3">
+
+    </div>
+  </form>
+</div>
