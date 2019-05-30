@@ -4,5 +4,5 @@ Follow these steps to run application
               {  npm install    }
 
 
-2. after installing node modules run the following command to run application on browser
+2. after installing node modules run the following command to run application on browser        
            {     ng serve --open    }
